@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import { Book, Users, FileText, GraduationCap, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
