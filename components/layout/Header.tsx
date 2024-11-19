@@ -27,7 +27,7 @@ export function Header() {
             </div>
             <span className="text-2xl font-bold text-[#5B4DFF] relative
               transition-transform duration-500 group-hover:translate-x-1">
-              KNOWlio
+              knowlio.
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5B4DFF]
                 transition-all duration-500 group-hover:w-full"></span>
             </span>
