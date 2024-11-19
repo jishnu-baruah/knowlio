@@ -32,7 +32,8 @@ export function Header() {
                 transition-all duration-500 group-hover:w-full"></span>
             </span>
           </div>
-          <div className="hidden md:flex space-x-6">
+          
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -49,7 +50,19 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+            
+            <Link
+              href="https://knowlio-mvp.vercel.app/login"
+              className="px-6 py-2 bg-[#5B4DFF] text-white rounded-full
+                transform transition-all duration-300
+                hover:scale-105 hover:shadow-lg hover:bg-[#4B3DFF]
+                active:scale-95
+                focus:outline-none focus:ring-2 focus:ring-[#5B4DFF]/50"
+            >
+              Get Started
+            </Link>
           </div>
+
           <div className="md:hidden">
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -81,6 +94,16 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+            
+            <Link
+              href="https://knowlio-mvp.vercel.app/login"
+              onClick={() => setIsMenuOpen(false)}
+              className="block w-full text-center text-white bg-[#5B4DFF] p-2 rounded-lg
+                transform transition-all duration-300
+                hover:bg-[#4B3DFF] hover:translate-x-2"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
       </nav>

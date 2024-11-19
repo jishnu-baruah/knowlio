@@ -8,6 +8,7 @@ import { Opportunity } from '@/components/sections/Opportunity'
 import { Revenue } from '@/components/sections/Revenue'
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export default function KNOWlioLandingPage() {
   return (
@@ -28,12 +29,14 @@ export default function KNOWlioLandingPage() {
             <p className="text-xl mb-8">
               Start accessing affordable academic resources today and transform your learning experience.
             </p>
-            <Button 
-              size="lg" 
-              className="bg-white text-[#5B4DFF] hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
-            >
-              Sign Up Now <ArrowRight className="ml-2" />
-            </Button>
+            <Link href="https://knowlio-mvp.vercel.app/login">
+              <Button 
+                size="lg" 
+                className="bg-white text-[#5B4DFF] hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
+              >
+                Sign Up Now <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </section>
       </main>

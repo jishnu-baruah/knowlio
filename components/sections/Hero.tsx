@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles, Book, Users, Star } from 'lucide-react'
+import Link from 'next/link'
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -55,23 +56,38 @@ export function Hero() {
           </div>
 
           <div className="space-y-8">
-  <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white space-y-2">
-    <span className="inline-block transform transition-all duration-700
-      hover:scale-105 cursor-default">
-      Valuing
-    </span>
-    <br />
-    <span className="inline-block transform transition-all duration-700
-      hover:scale-105 cursor-default animate-text-shine">
-      Students
-    </span>
-  </h1>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white space-y-2">
+              <span className="inline-block transform transition-all duration-700
+                hover:scale-105 cursor-default">
+                Valuing
+              </span>
+              <br />
+              <span className="inline-block transform transition-all duration-700
+                hover:scale-105 cursor-default animate-text-shine">
+                Students
+              </span>
+            </h1>
 
-  <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto
-    transform transition-all duration-700 delay-200">
-    Digital Book Rental & Academic Resource Platform
-  </p>
-</div>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto
+              transform transition-all duration-700 delay-200">
+              Digital Book Rental & Academic Resource Platform
+            </p>
+
+            {/* New Call-to-Action Button */}
+            <div className="pt-8 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
+              <Link href="https://knowlio-mvp.vercel.app/login">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-[#5B4DFF] hover:bg-blue-50 
+                    transition-all duration-300 transform hover:scale-105
+                    shadow-xl hover:shadow-2xl hover:shadow-white/20
+                    font-semibold text-lg px-8 py-6"
+                >
+                  Start Now <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
